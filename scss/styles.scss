@@ -1,0 +1,116 @@
+body {
+  font-family: "Open Sans";
+}
+
+.panel {
+  width: 25%;
+  margin: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border: 0;
+  > {
+    .panel-heading {
+      background-color: rgb(91, 91, 92);
+      color: white;
+      height: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0px;
+      text-shadow: -1px 0 #7d7d7e, 0 1px #7d7d7e, 1px 0 #7d7d7e, 0 -1px #7d7d7e;
+    }
+    .panel-body {
+      background-color: #f0f0f1;
+      padding: 0px;
+      > .panel-currency {
+        background-color: rgb(238, 244, 248);
+        height: 50px;
+        margin-bottom: 15%;
+        > .row > {
+          .panel-currency-left {
+            &:before {
+              border-bottom: 23px solid transparent;
+              border-left: 33px solid #d1d2d2;
+              border-top: 23px solid transparent;
+              content: "";
+              height: 0;
+              left: 100%;
+              top: -1px;
+              position: absolute;
+              width: 15%;
+            }
+            background: white;
+            margin-left: 22px;
+            margin-top: 3px;
+            width: 33%;
+            border-left: 1px solid #d1d2d2;
+            border-top: 1px solid #d1d2d2;
+            border-bottom: 1px solid #d1d2d2;
+            &:after {
+              border-bottom: 22px solid transparent;
+              border-left: 32px solid white;
+              border-top: 22px solid transparent;
+              content: "";
+              height: 0;
+              left: 100%;
+              top: 0;
+              position: absolute;
+              width: 15%;
+            }
+            p {
+              margin: 0;
+              color: #ca171e;
+            }
+            #sell {
+              font-size: 10px;
+            }
+            #sell-value {
+              margin-top: 10px;
+            }
+          }
+          .panel-currency-right {
+            background: white;
+            margin-left: 20%;
+            margin-top: 1%;
+            border-right: 1px solid #d1d2d2;
+            border-top: 1px solid #d1d2d2;
+            border-bottom: 1px solid #d1d2d2;
+            width: 33%;
+            p {
+              color: #6d8d35;
+              margin: 0;
+            }
+            #buy {
+              text-align: right;
+              font-size: 10px;
+            }
+            #buy-value {
+              margin-top: 10px;
+              text-align: right;
+            }
+            &:before {
+              border-bottom: 23px solid transparent;
+              border-right: 33px solid #d1d2d2;
+              border-top: 23px solid transparent;
+              content: "";
+              height: 0;
+              left: -31%;
+              top: -1px;
+              position: absolute;
+              width: 15%;
+            }
+            &:after {
+              border-bottom: 22px solid transparent;
+              border-right: 32px solid white;
+              border-top: 22px solid transparent;
+              content: "";
+              height: 0;
+              left: -30%;
+              top: 0;
+              position: absolute;
+              width: 15%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
