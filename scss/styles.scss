@@ -40,7 +40,7 @@ body {
             background: white;
             margin-left: 22px;
             margin-top: 3px;
-            width: 33%;
+            width: 32%;
             border-left: 1px solid #d1d2d2;
             border-top: 1px solid #d1d2d2;
             border-bottom: 1px solid #d1d2d2;
@@ -59,6 +59,24 @@ body {
               margin: 0;
               color: #ca171e;
             }
+            &:hover{
+              background-color: red;
+              border-left: 3px solid #4bacc6;
+              border-top: 3px solid #4bacc6;
+              border-bottom: 3px solid #4bacc6;
+              p{
+                color: white;
+              }
+              &:before{
+                border-bottom: 25px solid transparent;
+                border-left: 35px solid #4bacc6;
+                border-top: 25px solid transparent;
+                top:-3px;
+              }
+              &:after{
+                border-left: 32px solid red;
+              }
+            }
             #sell {
               font-size: 10px;
             }
@@ -68,12 +86,12 @@ body {
           }
           .panel-currency-right {
             background: white;
-            margin-left: 20%;
-            margin-top: 1%;
+            margin-left: 68px;
+            margin-top: 3px;
             border-right: 1px solid #d1d2d2;
             border-top: 1px solid #d1d2d2;
             border-bottom: 1px solid #d1d2d2;
-            width: 33%;
+            width: 32%;
             p {
               color: #6d8d35;
               margin: 0;
@@ -92,7 +110,7 @@ body {
               border-top: 23px solid transparent;
               content: "";
               height: 0;
-              left: -31%;
+              right: 100%;
               top: -1px;
               position: absolute;
               width: 15%;
@@ -103,10 +121,28 @@ body {
               border-top: 22px solid transparent;
               content: "";
               height: 0;
-              left: -30%;
+              right: 100%;
               top: 0;
               position: absolute;
               width: 15%;
+            }
+            &:hover{
+              background-color: #7fd13b;
+              border-right: 3px solid #4bacc6;
+              border-top: 3px solid #4bacc6;
+              border-bottom: 3px solid #4bacc6;
+              p{
+                color: white;
+              }
+              &:before{
+                border-bottom: 25px solid transparent;
+                border-right: 35px solid #4bacc6;
+                border-top: 25px solid transparent;
+                top:-3px;
+              }
+              &:after{
+                border-right: 32px solid #7fd13b;
+              }
             }
           }
         }
