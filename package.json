@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
+    "http-server": "^0.10.0"
   },
   "devDependencies": {
-    "http-server": "^0.10.0",
+    "concurrently": "^3.4.0",
     "node-sass": "^4.5.3",
     "nodemon": "1.11.0"
   },
   "scripts": {
-    "start": "npm run build-css && http-server -o ",
-    "build-css": "node-sass --include-path scss scss/styles.scss dist/css/main.css"
+    "start": "npm run build-css && http-server -o",
+    "dev": "concurrently --kill-others \"npm run watch-css\" \"http-server -o\"",
+    "build-css": "node-sass --include-path scss scss/styles.scss dist/css/main.css",
+    "watch-css": "nodemon -e scss -x npm run build-css"
   },
   "repository": {
     "type": "git",
