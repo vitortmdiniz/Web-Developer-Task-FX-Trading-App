@@ -13,7 +13,7 @@
   "scripts": {
     "start": "npm run build-css && http-server -o",
     "dev": "concurrently --kill-others \"npm run watch-css\" \"http-server -o\"",
-    "build-css": "node-sass --include-path scss scss/styles.scss dist/css/main.css",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/main.css",
     "watch-css": "nodemon -e scss -x npm run build-css"
   },
   "repository": {
