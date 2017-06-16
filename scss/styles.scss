@@ -1,179 +1,220 @@
 body {
   font-family: "Open Sans";
-}
 
-.panel {
-  width: 25%;
-  margin: 0;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  border: 0;
-  display: inline-block;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  > {
-    .panel-heading {
-      background-color: rgb(91, 91, 92);
-      color: white;
-      height: 20px;
-      font-weight: bold;
-      text-align: center;
-      padding: 0px;
-      text-shadow: -1px 0 #7d7d7e, 0 1px #7d7d7e, 1px 0 #7d7d7e, 0 -1px #7d7d7e;
-    }
-    .panel-body {
-      background-color: #f0f0f1;
-      padding: 0px;
-      > .panel-currency {
-        background-color: rgb(238, 244, 248);
-        height: 50px;
-        margin-bottom: 15%;
-        > .row > {
-          .panel-currency-left-triangle {
-            padding-left: 0;
-            margin-top: 3px;
-            .panel-currency-left-triangle-inside {
-              border-bottom: 22px solid transparent;
-              border-left: 31px solid white;
-              border-top: 20px solid transparent;
-              height: 0;
-              width: 0;
-              top: 1px;
-              position: absolute;
-            }
-            .panel-currency-left-triangle-outside {
-              border-bottom: 24px solid transparent;
-              border-left: 33px solid #d1d2d2;
-              border-top: 21px solid transparent;
-              height: 0;
-              width: 0;
-            }
+  .panel {
+    width: 25%;
+    margin: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border: 0;
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    > {
+      .panel-heading {
+        background-color: rgb(91, 91, 92);
+        color: white;
+        height: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px;
+        text-shadow: -1px 0 #7d7d7e, 0 1px #7d7d7e, 1px 0 #7d7d7e, 0 -1px #7d7d7e;
+      }
+      .panel-body {
+        background-color: #f0f0f1;
+        padding: 0px;
+        > .panel-currency {
+          background-color: rgb(238, 244, 248);
+          height: 50px;
+          margin-bottom: 15%;
+           .row  {
+             .col-sm-5 >
+            .panel-currency-left {
+               &:before{
+                 padding-left: 0;
+                 margin-top: 3px;
+                 border-bottom: 23px solid transparent;
+                 border-left: 33px solid #d1d2d2;
+                 border-top: 23px solid transparent;
+                 height: 0;
+                 width: 0;
+                 position: absolute;
+                 left: 89%;
+                 top:-1%;
+                 content:''
 
-          }
-          .panel-currency-left {  
-            margin-left: 18px ;
-            height: 45px;
-            background: white;
-            margin-top: 3px;
-            border-left: 1px solid #d1d2d2;
-            border-top: 1px solid #d1d2d2;
-            border-bottom: 1px solid #d1d2d2;
+               }
+               &:after{
+                 padding-left: 0;
+                 margin-top: 3px;
+                 border-bottom: 20px solid transparent;
+                 border-left: 31px solid white;
+                 border-top: 21px solid transparent;
+                 height: 0;
+                 width: 0;
+                 top: 5%;
+                 left: 89%;
+                 position: absolute;
+                 content:''
+               }
+              margin-left: 5px ;
+              height: 45px;
+              background: white;
+              margin-top: 3px;
+              border-left: 1px solid #d1d2d2;
+              border-top: 1px solid #d1d2d2;
+              border-bottom: 1px solid #d1d2d2;
 
-            p {
-              margin: 0;
-              color: #ca171e;
-            }
-            .sell {
-              font-size: 9px;
-              position: absolute;
-              left:5px;
-              font-weight: bold;
-            }
-            .sell-value {
-              position: absolute;
-              top:1px;
-              left: 5px;
-              .sell-value-first{
-                  font-size: 20px;
+              p {
+                margin: 0;
+                color: #ca171e;
               }
-              .sell-value-second{
-                  font-size: 35px;
-                  font-weight: bold;
-              }
-              .sell-value-third{
-                font-size: 20px;
-                position: absolute;
-                top:3px;
-              }
-            }
-
-          }
-          .col-sm-2{
-            padding-left: 5px;
-            padding-right: 5px;
-            width:0;
-          }
-          .col-sm-2 > .middle-triangle-green{
-            width: 0;
-            height: 0;
-            margin-top: 3px;
-            border-style: solid;
-            border-width: 0 5px 15px 5px;
-            border-color: transparent transparent #008f10 transparent;
-          }
-          .col-sm-2 > .middle-triangle-red{
-            width: 0;
-            height: 0;
-            margin-top: 3px;
-            border-style: solid;
-            border-width: 15px 5px 0 5px;
-            border-color: #d70000 transparent transparent transparent;
-
-          }
-          .panel-currency-right-triangle{
-            padding-left: 0px;
-            margin-top: 3px;
-            margin-left: 4px;
-          }
-          .panel-currency-right-triangle > .panel-currency-right-triangle-inside {
-            border-bottom: 20px solid transparent;
-            border-right: 30px solid white;
-            border-top: 20px solid transparent;
-            height: 0;
-            width: 0;
-            top:2px;
-            position: absolute;
-          }
-          .panel-currency-right-triangle > .panel-currency-right-triangle-outside {
-            border-bottom: 24px solid transparent;
-            border-right: 33px solid #d1d2d2;
-            border-top: 21px solid transparent;
-            height: 0;
-            width: 0;
-          }
-          .panel-currency-right {
-            background: white;
-            margin-top: 3px;
-            border-right: 1px solid #d1d2d2;
-            border-top: 1px solid #d1d2d2;
-            border-bottom: 1px solid #d1d2d2;
-            height: 45px;
-            margin-left: 4px;
-
-            p {
-              color: #6d8d35;
-              margin: 0;
-            }
-            .buy {
-              text-align: right;
-              font-size: 9px;
-              right: 5px;
-              position: absolute;
-              font-weight: bold;
-            }
-            .buy-value {
-              position: absolute;
-              top:1px;
-              text-align: right;
-              .buy-value-first{
-                font-size: 20px;
-              }
-              .buy-value-second{
-                font-size: 35px;
+              .sell {
+                font-size: 9px;
+                margin-left: 5px;
                 font-weight: bold;
               }
-              .buy-value-third{
-                font-size: 20px;
-                position: absolute;
-                top:3px;
+              .sell-value {
+                margin-top: -12px ;
+                margin-left: 5px;
+                .sell-value-first{
+                    font-size: 20px;
+                }
+                .sell-value-second{
+                    font-size: 35px;
+                    font-weight: bold;
+                }
+                .sell-value-third{
+                  font-size: 20px;
+                  position: absolute;
+                  top:10px;
+                }
+              }
+               &:hover{
+                 background-color: red;
+                 border-left: 3px solid #4bacc6;
+                 border-top: 3px solid #4bacc6;
+                 border-bottom: 3px solid #4bacc6;
+                 p{
+                   color: white;
+                 }
+                 &:before{
+                   border-bottom: 22px solid transparent;
+                   border-left: 38px solid #4bacc6;
+                   border-top: 25px solid transparent;
+                   top:-3%;
+                   height: 0;
+                   width: 0;
+                 }
+                 &:after{
+                   border-left: 32px solid red;
+                 }
+               }
+            }
+
+            .panel-center {
+              text-align: center;
+              .middle-triangle-green {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 5px 15px 5px;
+                border-color: transparent transparent #008f10 transparent;
+                margin: 3px auto auto auto;
+                padding-top: 3px;
+              }
+              .middle-triangle-red {
+                width: 0;
+                height: 0;
+                margin: 3px auto auto auto;
+                border-style: solid;
+                border-width: 15px 5px 0 5px;
+                border-color: #d70000 transparent transparent transparent;
+                top:1px;
+
               }
             }
-            &:hover{
-              background-color: #7fd13b;
-              border-right: 3px solid #4bacc6;
-              border-top: 3px solid #4bacc6;
-              border-bottom: 3px solid #4bacc6;
-              p{
-                color: white;
+            .panel-currency-right {
+              background: white;
+              margin-top: 3px;
+              border-right: 1px solid #d1d2d2;
+              border-top: 1px solid #d1d2d2;
+              border-bottom: 1px solid #d1d2d2;
+              height: 45px;
+              margin-left: 4px;
+              margin-right: 5px ;
+
+              p {
+                color: #6d8d35;
+                margin: 0;
+              }
+              .buy {
+                text-align: right;
+                font-size: 9px;
+                margin-right: 5px;
+                font-weight: bold;
+              }
+              .buy-value {
+                margin-right: 15px;
+                margin-top: -12px;
+                text-align: right;
+                .buy-value-first{
+                  font-size: 20px;
+                }
+                .buy-value-second{
+                  font-size: 35px;
+                  font-weight: bold;
+                }
+                .buy-value-third{
+                  font-size: 20px;
+                  position: absolute;
+                  top:10px;
+                }
+              }
+              &:before{
+                padding-left: 0px;
+                margin-top: 3px;
+                margin-left: 4px;
+                border-bottom: 24px solid transparent;
+                border-right: 33px solid #d1d2d2;
+                border-top: 22px solid transparent;
+                height: 0;
+                width: 0;
+                left: -13%;
+                top:-1%;
+                content:'';
+                position: absolute;
+              }
+              &:after{
+                padding-left: 0px;
+                margin-top: 3px;
+                margin-left: 4px;
+                border-bottom: 20px solid transparent;
+                border-right: 30px solid white;
+                border-top: 20px solid transparent;
+                height: 0;
+                width: 0;
+                top:5%;
+                left:-11%;
+                position: absolute;
+                content:''
+              }
+              &:hover{
+                background-color: #7fd13b;
+                border-right: 3px solid #4bacc6;
+                border-top: 3px solid #4bacc6;
+                border-bottom: 3px solid #4bacc6;
+                p{
+                  color: white;
+                }
+                &:before{
+                  border-bottom: 24px solid transparent;
+                  border-right: 35px solid #4bacc6;
+                  border-top: 24px solid transparent;
+                  top:-2px;
+                }
+                &:after{
+                  border-right: 32px solid #7fd13b;
+                }
               }
             }
           }
