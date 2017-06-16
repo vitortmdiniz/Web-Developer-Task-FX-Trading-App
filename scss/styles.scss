@@ -7,6 +7,9 @@ body {
   margin: 0;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   border: 0;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 10px;
   > {
     .panel-heading {
       background-color: rgb(91, 91, 92);
@@ -25,106 +28,144 @@ body {
         height: 50px;
         margin-bottom: 15%;
         > .row > {
-          .panel-currency-left {
-            &:before {
-              border-bottom: 23px solid transparent;
-              border-left: 33px solid #d1d2d2;
-              border-top: 23px solid transparent;
-              content: "";
-              height: 0;
-              left: 100%;
-              top: -1px;
-              position: absolute;
-              width: 15%;
-            }
-            background: white;
-            margin-left: 22px;
+          .panel-currency-left-triangle {
+            padding-left: 0;
             margin-top: 3px;
-            width: 32%;
+            .panel-currency-left-triangle-inside {
+              border-bottom: 22px solid transparent;
+              border-left: 31px solid white;
+              border-top: 20px solid transparent;
+              height: 0;
+              width: 0;
+              top: 1px;
+              position: absolute;
+            }
+            .panel-currency-left-triangle-outside {
+              border-bottom: 24px solid transparent;
+              border-left: 33px solid #d1d2d2;
+              border-top: 21px solid transparent;
+              height: 0;
+              width: 0;
+            }
+
+          }
+          .panel-currency-left {  
+            margin-left: 18px ;
+            height: 45px;
+            background: white;
+            margin-top: 3px;
             border-left: 1px solid #d1d2d2;
             border-top: 1px solid #d1d2d2;
             border-bottom: 1px solid #d1d2d2;
-            &:after {
-              border-bottom: 22px solid transparent;
-              border-left: 32px solid white;
-              border-top: 22px solid transparent;
-              content: "";
-              height: 0;
-              left: 100%;
-              top: 0;
-              position: absolute;
-              width: 15%;
-            }
+
             p {
               margin: 0;
               color: #ca171e;
             }
-            &:hover{
-              background-color: red;
-              border-left: 3px solid #4bacc6;
-              border-top: 3px solid #4bacc6;
-              border-bottom: 3px solid #4bacc6;
-              p{
-                color: white;
+            .sell {
+              font-size: 9px;
+              position: absolute;
+              left:5px;
+              font-weight: bold;
+            }
+            .sell-value {
+              position: absolute;
+              top:1px;
+              left: 5px;
+              .sell-value-first{
+                  font-size: 20px;
               }
-              &:before{
-                border-bottom: 25px solid transparent;
-                border-left: 35px solid #4bacc6;
-                border-top: 25px solid transparent;
-                top:-3px;
+              .sell-value-second{
+                  font-size: 35px;
+                  font-weight: bold;
               }
-              &:after{
-                border-left: 32px solid red;
+              .sell-value-third{
+                font-size: 20px;
+                position: absolute;
+                top:3px;
               }
             }
-            #sell {
-              font-size: 10px;
-            }
-            #sell-value {
-              margin-top: 10px;
-            }
+
+          }
+          .col-sm-2{
+            padding-left: 5px;
+            padding-right: 5px;
+            width:0;
+          }
+          .col-sm-2 > .middle-triangle-green{
+            width: 0;
+            height: 0;
+            margin-top: 3px;
+            border-style: solid;
+            border-width: 0 5px 15px 5px;
+            border-color: transparent transparent #008f10 transparent;
+          }
+          .col-sm-2 > .middle-triangle-red{
+            width: 0;
+            height: 0;
+            margin-top: 3px;
+            border-style: solid;
+            border-width: 15px 5px 0 5px;
+            border-color: #d70000 transparent transparent transparent;
+
+          }
+          .panel-currency-right-triangle{
+            padding-left: 0px;
+            margin-top: 3px;
+            margin-left: 4px;
+          }
+          .panel-currency-right-triangle > .panel-currency-right-triangle-inside {
+            border-bottom: 20px solid transparent;
+            border-right: 30px solid white;
+            border-top: 20px solid transparent;
+            height: 0;
+            width: 0;
+            top:2px;
+            position: absolute;
+          }
+          .panel-currency-right-triangle > .panel-currency-right-triangle-outside {
+            border-bottom: 24px solid transparent;
+            border-right: 33px solid #d1d2d2;
+            border-top: 21px solid transparent;
+            height: 0;
+            width: 0;
           }
           .panel-currency-right {
             background: white;
-            margin-left: 68px;
             margin-top: 3px;
             border-right: 1px solid #d1d2d2;
             border-top: 1px solid #d1d2d2;
             border-bottom: 1px solid #d1d2d2;
-            width: 32%;
+            height: 45px;
+            margin-left: 4px;
+
             p {
               color: #6d8d35;
               margin: 0;
             }
-            #buy {
+            .buy {
               text-align: right;
-              font-size: 10px;
+              font-size: 9px;
+              right: 5px;
+              position: absolute;
+              font-weight: bold;
             }
-            #buy-value {
-              margin-top: 10px;
+            .buy-value {
+              position: absolute;
+              top:1px;
               text-align: right;
-            }
-            &:before {
-              border-bottom: 23px solid transparent;
-              border-right: 33px solid #d1d2d2;
-              border-top: 23px solid transparent;
-              content: "";
-              height: 0;
-              right: 100%;
-              top: -1px;
-              position: absolute;
-              width: 15%;
-            }
-            &:after {
-              border-bottom: 22px solid transparent;
-              border-right: 32px solid white;
-              border-top: 22px solid transparent;
-              content: "";
-              height: 0;
-              right: 100%;
-              top: 0;
-              position: absolute;
-              width: 15%;
+              .buy-value-first{
+                font-size: 20px;
+              }
+              .buy-value-second{
+                font-size: 35px;
+                font-weight: bold;
+              }
+              .buy-value-third{
+                font-size: 20px;
+                position: absolute;
+                top:3px;
+              }
             }
             &:hover{
               background-color: #7fd13b;
@@ -133,15 +174,6 @@ body {
               border-bottom: 3px solid #4bacc6;
               p{
                 color: white;
-              }
-              &:before{
-                border-bottom: 25px solid transparent;
-                border-right: 35px solid #4bacc6;
-                border-top: 25px solid transparent;
-                top:-3px;
-              }
-              &:after{
-                border-right: 32px solid #7fd13b;
               }
             }
           }

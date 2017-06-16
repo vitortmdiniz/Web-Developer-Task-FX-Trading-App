@@ -8,22 +8,34 @@
         <link rel="stylesheet" href="dist/css/main.css" />
 
     </head>
-    <body class="container">
-        <div class="panel ">
-            <div class="panel-heading">EUR CAD</div>
+    <body class="container" ng-app="FxTradingApp" ng-controller="panelCtrl">
+        <div class="panel" ng-repeat="data in source">
+            <div class="panel-heading">{{data.pair}}</div>
             <div class="panel-body">
                 <div class="panel-currency">
                     <div class="row">
-                        <div class="col-sm-6 panel-currency-left">
-                            <p id="sell">Sell USD</p>
-                            <p id="sell-value">
-                                <span>0.99</span><span>04</span><span>3</span>
+                        <div class="col-sm-4 panel-currency-left">
+                            <p class="sell">Sell {{data.pair | limitTo:3}}</p>
+                            <p class="sell-value">
+                                <span class="sell-value-first">{{data.sell | limitTo:4}}</span><span class="sell-value-second">{{(data.sell.toString().slice(4)) | limitTo:2}}</span><span class="sell-value-third">{{data.sell.toString().slice(-1)}}</span>
                             </p>
                         </div>
-                        <div class="col-sm-6 panel-currency-right">
-                            <p id="buy">Buy USD</p>
-                            <p id="buy-value" >
-                                <span>0.99</span><span>14</span><span>3</span>
+                        <div class="col-sm-1 panel-currency-left-triangle">
+                            <div class="panel-currency-left-triangle-outside"></div>
+                            <div class="panel-currency-left-triangle-inside"></div>
+                        </div>
+                        <div class="col-sm-2" >
+                            <div ng-if="data.priceIncreased" class="middle-triangle-green"></div>
+                            <div ng-if="!data.priceIncreased" class="middle-triangle-red"></div>
+                        </div>
+                        <div class="col-sm-1 panel-currency-right-triangle">
+                            <div class="panel-currency-right-triangle-inside"></div>
+                            <div class="panel-currency-right-triangle-outside"></div>
+                        </div>
+                        <div class="col-sm-4 panel-currency-right">
+                            <p class="buy">Buy {{data.pair | limitTo:3}}</p>
+                            <p class="buy-value" >
+                                <span class="buy-value-one">{{data.buy | limitTo:4}}</span><span class="buy-value-second">{{(data.buy.toString().slice(4)) | limitTo:2}}</span><span class="buy-value-third">{{data.buy.toString().slice(-1)}}</span>
                             </p>
                         </div>
                     </div>
@@ -32,7 +44,7 @@
             </div>
         </div>
     </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
 </html>
 
